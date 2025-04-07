@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carbon Footprint Calculator</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
@@ -15,31 +15,58 @@
         </div>
         <div id="info">     
             <div id="info-title">
-                <span style="font-size: 40px; font-weight : 600">UNITED NATIONS</span> <br> <span style="font-size: 25px; font-weight : 500">SUSTAINABLE DEVELOPMENT GOAL 13</span>
+                <span style="font-size: 40px; font-weight: 600">UNITED NATIONS</span> <br> 
+                <span style="font-size: 25px; font-weight: 500">SUSTAINABLE DEVELOPMENT GOAL 13</span>
                 <br>
                 <span style="font-size: 25px; font-weight: 600;"><u>CLIMATE <i>Action</i></u></span>
             </div>
             <div id="contribution">
                 <span style="font-weight:600">Team Members:</span> <br>
-                Prathamesh <br> Suvan Kumar Shee <br>Armaan Gupta <br> Gokul Nair
+                Prathamesh <br> Suvan Kumar Shee <br> Armaan Gupta <br> Gokul Nair
             </div>
         </div>
     </div>
     <div id="form-container">
-        <h2><span style="text-align: left; font-size: 50px; color: rgb(249, 223, 223); background-color: rgba(0, 0, 0, 0.481);border-radius: 8px; padding: 5px">Calculate your carbon footprint</span></h2>
+        <h2><span style="text-align: left; font-size: 50px; color: rgb(249, 223, 223); background-color: rgba(0, 0, 0, 0.481); border-radius: 8px; padding: 5px">Calculate your carbon footprint</span></h2>
         
-            <form action="#" id="form">
-                <label class="label-inputs">Electricity Usage (kWh)</label>
-                <input min="1" type="number" class = "inputs" id="elec">
-                <label class="label-inputs">Vehicle Fuel consumption (Litre)</label>
-                <input min="1" type="number" class = "inputs" id="fuel">
-                <label class="label-inputs">Wastage (Kg)</label>
-                <input min="1" type="number" class = "inputs" id="waste">
-                <label class="label-inputs">Car Mileage (Litre)</label>
-                <input min="1" type="number" class = "inputs" id="mile">
-                <button type="submit" id="calculate"> SUBMIT</button>
-            </form>
-            <label for="result" id="result"></label>
-    </div>
+        <form action="#" id="form">
+            <label class="label-inputs">Electricity Usage (kWh)</label>
+            <input min="1" type="number" class="inputs" id="elec">
+            <label class="label-inputs">Vehicle Fuel Consumption (Litre)</label>
+            <input min="1" type="number" class="inputs" id="fuel">
+            <label class="label-inputs">Wastage (Kg)</label>
+            <input min="1" type="number" class="inputs" id="waste">
+            <label class="label-inputs">Car Mileage (Km)</label>
+            <input min="1" type="number" class="inputs" id="mile">
+            <button type="submit" id="calculate">SUBMIT</button>
+        </form>
+        <label for="result" id="result"></label>
+
+        <!-- Set Goal Section -->
+        <div id="goalSection">
+            <h3><span style="color: rgb(249, 223, 223); background-color: rgba(0, 0, 0, 0.481); border-radius: 8px; padding: 5px">Set Your Carbon Goal</span></h3>
+            <input type="number" id="goalInput" class="inputs" placeholder="Enter goal in kg CO2" min="1" step="any">
+            <button id="setGoal">Set Goal</button>
+            <p id="goalDisplay"></p>
+            <p id="progressDisplay"></p>
+        </div>
+<!-- What If? Section -->
+<div id="whatIfSection">
+    <h3><span style="color: rgb(249, 223, 223); background-color: rgba(0, 0, 0, 0.481); border-radius: 8px; padding: 5px">What If? Explore Changes</span></h3>
+    <label class="label-inputs">Reduce Electricity (%)</label>
+    <input type="range" id="electricitySlider" class="what-if-slider" min="0" max="100" value="0">
+    <span class="slider-value" id="electricityValue">0%</span><br>
+    <label class="label-inputs">Reduce Fuel (%)</label>
+    <input type="range" id="fuelSlider" class="what-if-slider" min="0" max="100" value="0">
+    <span class="slider-value" id="fuelValue">0%</span><br>
+    <label class="label-inputs">Reduce Waste (%)</label>
+    <input type="range" id="wasteSlider" class="what-if-slider" min="0" max="100" value="0">
+    <span class="slider-value" id="wasteValue">0%</span><br>
+    <label class="label-inputs">Reduce Mileage (%)</label>
+    <input type="range" id="mileSlider" class="what-if-slider" min="0" max="100" value="0">
+    <span class="slider-value" id="mileValue">0%</span><br>
+    <p id="whatIfResult"></p>
+</div>
+</div>
 </body>
 </html>
