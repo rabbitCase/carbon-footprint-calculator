@@ -84,7 +84,7 @@ body {
     justify-content: center;
     align-items: center;
     background-image: url("res/bg_img.jpg");
-    background-size: cover;
+    background-size: contain;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     margin-top: 12px;
@@ -227,7 +227,7 @@ body {
     border-radius: 50%; /* Circular thumb */
     cursor: pointer; /* Hand cursor on hover */
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
-    transition: background 0.2s ease; /* Smooth color transition */
+    transition: background-color 0.2s ease; /* Smooth color transition */
 }
 
 .what-if-slider::-webkit-slider-thumb:hover {
