@@ -210,49 +210,49 @@ body {
 
 .what-if-slider {
     width: 300px;
-    -webkit-appearance: none; /* Remove default styling for WebKit */
-    appearance: none; /* Remove default styling for other browsers */
-    height: 10px; /* Track thickness */
-    background: white; /* Track color */
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 10px; 
+    background: white; 
     border-radius: 5px;
-    outline: none; /* Remove outline */
+    outline: none; 
 }
 
 .what-if-slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Remove default thumb styling */
+    -webkit-appearance: none; 
     appearance: none;
-    width: 20px; /* Custom thumb width */
-    height: 20px; /* Custom thumb height */
-    background: rgb(11, 152, 62); /* Match your green theme */
-    border-radius: 50%; /* Circular thumb */
-    cursor: pointer; /* Hand cursor on hover */
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
-    transition: background-color 0.2s ease; /* Smooth color transition */
+    width: 20px; 
+    height: 20px; 
+    background: rgb(11, 152, 62); 
+    border-radius: 50%; 
+    cursor: pointer; 
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); 
+    transition: background-color 0.2s ease; 
 }
 
 .what-if-slider::-webkit-slider-thumb:hover {
-    background: rgb(28, 82, 8); /* Darker green on hover */
+    background: rgb(28, 82, 8); 
 }
 
 .what-if-slider::-moz-range-thumb {
-    width: 20px; /* Custom thumb width for Firefox */
-    height: 20px; /* Custom thumb height */
-    background: rgb(11, 152, 62); /* Match your green theme */
-    border-radius: 50%; /* Circular thumb */
-    cursor: pointer; /* Hand cursor on hover */
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Slight shadow */
+    width: 20px; 
+    height: 20px; 
+    background: rgb(11, 152, 62); 
+    border-radius: 50%; 
+    cursor: pointer; 
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); 
 }
 
 .what-if-slider::-ms-thumb {
-    width: 20px; /* Custom thumb width for IE/Edge */
-    height: 20px; /* Custom thumb height */
-    background: rgb(11, 152, 62); /* Match your green theme */
-    border-radius: 50%; /* Circular thumb */
-    cursor: pointer; /* Hand cursor on hover */
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Slight shadow */
+    width: 20px; 
+    height: 20px; 
+    background: rgb(11, 152, 62); 
+    border-radius: 50%; 
+    cursor: pointer; 
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); 
 }
 
-/* Add percentage display styling */
+
 .slider-value {
     font-size: 18px;
     color: white;
@@ -272,4 +272,116 @@ body {
     border-radius: 8px;
     padding: 5px;
     text-align: center;
+}
+#trivia-container{
+    border-top: 15px solid black;
+}
+#list{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+#ccfg{
+    padding-bottom: 50px;
+    border-bottom: 2px solid grey;
+}
+#stats-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 950px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    gap: 12px;
+    margin-top: 30px;
+}
+.tiles-small{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 3px dotted rgb(151, 153, 15);
+    height: 100px;
+    width: 137px;
+    text-align: center;
+    will-change: transform;
+    color: rgb(59, 59, 59);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.tiles-china{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 3px dotted rgb(151, 153, 15);
+    height: 100px;
+    width: 950px;
+    text-align: center;
+    will-change: transform;
+    background-image: linear-gradient(to left,rgb(255, 182, 182),white,white,white,rgb(255, 170, 170));
+    font-size: 25px;
+    color: rgb(59, 59, 59);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.tiles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 3px dotted rgb(151, 153, 15);
+    height: 100px;
+    width: 300px;
+    text-align: center;
+    will-change: transform;
+    color: rgb(59, 59, 59);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.tiles:hover{
+    transform: scale(1.05);
+}
+.tiles-small:hover{
+    transform: scale(1.05);
+}
+.tiles-china:hover{
+    transform: scale(1.05);
+}
+#sub-stat{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1200px;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+#sub-substat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    font-size: 15px;
+    width: 950px;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+#sub-substat img{
+    height: 10px;
+    width: 50px;
+    margin: 10px;
+}
+
+#trivia-container img{
+    height: 30px;
+    width: 40px;
+    margin: 10px;
+}
+#reference{
+    text-align: center;
+    padding-bottom: 50px;
 }
