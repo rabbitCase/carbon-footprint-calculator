@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div id="heading">Carbon Footprint Calculator</div>
+    <div id="representation">
+        <div id="quote">
+            <i>"Only when the last tree has been cut down, the last fish caught, and the last stream poisoned, will we realize we cannot eat money"</i>
+        </div>
+        <div id="info">     
+            <div id="info-title">
+                <span style="font-size: 40px; font-weight : 600">UNITED NATIONS</span> <br> <span style="font-size: 25px; font-weight : 500">SUSTAINABLE DEVELOPMENT GOAL 13</span>
+                <br>
+                <span style="font-size: 25px; font-weight: 600;"><u>CLIMATE <i>Action</i></u></span>
+            </div>
+            <div id="contribution">
+                <span style="font-weight:600">Team Members:</span> <br>
+                Prathamesh <br> Suvan Kumar Shee <br>Armaan Gupta <br> Gokul Nair
+            </div>
+        </div>
+    </div>
+    <div id="form-container">
+        <h2><span style="text-align: left; font-size: 50px; color: rgb(249, 223, 223); background-color: rgba(0, 0, 0, 0.481);border-radius: 8px; padding: 5px">Calculate your carbon footprint</span></h2>
+        
+            <form action="#" id="form">
+                <label class="label-inputs">Electricity Usage (kWh)</label>
+                <input min="1" type="number" class = "inputs" id="elec">
+                <label class="label-inputs">Vehicle Fuel consumption (Litre)</label>
+                <input min="1" type="number" class = "inputs" id="fuel">
+                <label class="label-inputs">Wastage (Kg)</label>
+                <input min="1" type="number" class = "inputs" id="waste">
+                <label class="label-inputs">Car Mileage (Litre)</label>
+                <input min="1" type="number" class = "inputs" id="mile">
+                <button type="submit" id="calculate"> SUBMIT</button>
+            </form>
+            <label for="result" id="result"></label>
+    </div>
+</body>
+</html>
