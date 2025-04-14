@@ -1,102 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbon Footprint Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
-</head>
-<body>
-    <div id="heading">Carbon Footprint Calculator</div>
-    <div id="representation">
-        <div id="quote">
-            <i>"Only when the last tree has been cut down, the last fish caught, and the last stream poisoned, will we realize we cannot eat money"</i>
-        </div>
-        <div id="info">     
-            <div id="info-title">
-                <span style="font-size: 40px; font-weight: 600">UNITED NATIONS</span> <br> 
-                <span style="font-size: 25px; font-weight: 500">SUSTAINABLE DEVELOPMENT GOAL 13</span>
-                <br>
-                <span style="font-size: 25px; font-weight: 600;"><u>CLIMATE <i>Action</i></u></span>
-            </div>
-            <div id="contribution">
-                <span style="font-weight:600">Team Members:</span> <br>
-                Prathamesh <br> Suvan Kumar Shee <br> Armaan Gupta <br> Gokul Nair
-            </div>
-        </div>
-    </div>
-    <div id="form-container">
-        <h2><span style="text-align: left; font-size: 50px; color: rgb(249, 223, 223); background-color: rgba(0, 0, 0, 0.481); border-radius: 8px; padding: 5px">Calculate your carbon footprint</span></h2>
-        
-        <form action="#" id="form">
-            <label class="label-inputs">Electricity Usage (kWh)</label>
-            <input min="1" type="number" class="inputs" id="elec">
-            <label class="label-inputs">Vehicle Fuel Consumption (Litre)</label>
-            <input min="1" type="number" class="inputs" id="fuel">
-            <label class="label-inputs">Wastage (Kg)</label>
-            <input min="1" type="number" class="inputs" id="waste">
-            <label class="label-inputs">Car Mileage (Km)</label>
-            <input min="1" type="number" class="inputs" id="mile">
-            <button type="submit" id="calculate">SUBMIT</button>
-        </form>
-        <label for="result" id="result"></label>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Carbon Footprint Calculator</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<div id="heading">Carbon Footprint Calculator</div>
+		<div id="representation">
+			<div id="quote">
+				<i
+					>"Only when the last tree has been cut down, the last fish caught, and
+					the last stream poisoned, will we realize we cannot eat money"</i
+				>
+			</div>
+			<div id="info">
+				<div id="info-title">
+					<span style="font-size: 40px; font-weight: 600">UNITED NATIONS</span>
+					<br />
+					<span style="font-size: 25px; font-weight: 500"
+						>SUSTAINABLE DEVELOPMENT GOAL 13</span
+					>
+					<br />
+					<span style="font-size: 25px; font-weight: 600"
+						><u>CLIMATE <i>Action</i></u></span
+					>
+				</div>
+				<div id="contribution">
+					<span style="font-weight: 600">Team Members:</span> <br />
+					Prathamesh <br />
+					Suvan Kumar Shee <br />
+					Armaan Gupta <br />
+					Gokul Nair
+				</div>
+			</div>
+		</div>
+		<div id="form-container">
+			<h2>
+				<span
+					style="
+						text-align: left;
+						font-size: 50px;
+						color: rgb(249, 223, 223);
+						background-color: rgba(0, 0, 0, 0.481);
+						border-radius: 8px;
+						padding: 5px;
+					"
+					>Calculate your carbon footprint</span
+				>
+			</h2>
 
-        <!-- Set Goal Section -->
-        <div id="goalSection">
-            <h3><span style="color: rgb(249, 223, 223); background-color: rgba(0, 0, 0, 0.481); border-radius: 8px; padding: 5px">Set Your Carbon Goal</span></h3>
-            <input type="number" id="goalInput" class="inputs" placeholder="Enter goal in kg CO2" min="1" step="any">
-            <button id="setGoal">Set Goal</button>
-            <p id="goalDisplay"></p>
-            <p id="progressDisplay"></p>
-        </div>
-        <!-- What If? Section -->
-        <div id="whatIfSection">
-            <h3><span style="color: rgb(249, 223, 223); background-color: rgba(0, 0, 0, 0.481); border-radius: 8px; padding: 5px">What If? Explore Changes</span></h3>
-            <label class="label-inputs">Reduce Electricity (%)</label>
-            <input type="range" id="electricitySlider" class="what-if-slider" min="0" max="100" value="0">
-            <span class="slider-value" id="electricityValue">0%</span><br>
-            <label class="label-inputs">Reduce Fuel (%)</label>
-            <input type="range" id="fuelSlider" class="what-if-slider" min="0" max="100" value="0">
-            <span class="slider-value" id="fuelValue">0%</span><br>
-            <label class="label-inputs">Reduce Waste (%)</label>
-            <input type="range" id="wasteSlider" class="what-if-slider" min="0" max="100" value="0">
-            <span class="slider-value" id="wasteValue">0%</span><br>
-            <label class="label-inputs">Reduce Mileage (%)</label>
-            <input type="range" id="mileSlider" class="what-if-slider" min="0" max="100" value="0">
-            <span class="slider-value" id="mileValue">0%</span><br>
-            <p id="whatIfResult"></p>
-        </div>
-    </div>
-    <div id="trivia-container">
-        <div id="ccfg">
-            <span style="font-size: 100px;font-weight: 700;">Carbon Cuts, <br>  &nbsp;&nbsp;&nbsp;Future <i>Gains</i></span>
-        </div>
-        <div id="list">
-            Major Greenhouse Gas Emitters <br> (2023) 
-        </div>
-        <div id="stats-container">
-                <div class="tiles-china"><img src="res/china.svg" alt="China Flag">CHINA: 15,943,986.55 ktCO2/year</div>
-            <div id="sub-stat">
-                <div class="tiles"><img src="res/us.svg" alt="China Flag">UNITED STATES: 5,960,804.38 ktCO2/year</div>
-                <div class="tiles"><img src="res/india.svg" alt="China Flag">INDIA: 4,133,554.36 ktCO2/year</div>
-                <div class="tiles"><img src="res/russia.svg" alt="China Flag">RUSSIA: 2,672,039.44 ktCO2/year</div>
-                <div class="tiles"><img src="res/brazil.svg" alt="China Flag">BRAZIL: 1,300,168.87 ktCO2/year</div>
-                <div class="tiles"><img src="res/indonesia.svg" alt="China Flag">INDONESIA: 1,200,199.79 ktCO2/year</div>
-                <div class="tiles"><img src="res/japan.svg" alt="China Flag">JAPAN: 1,041,012.82 ktCO2/year</div>
-            </div>
-            <div id="sub-substat">
-                <div class="tiles-small"><img src="res/iran.svg" alt="China Flag">IRAN: 996,752.68 ktCO2/year</div>
-                <div class="tiles-small"><img src="res/sa.svg" alt="China Flag">Saudi Arabia: 805,158.11 ktCO2/year</div>
-                <div class="tiles-small"><img src="res/canada.svg" alt="China Flag">CANADA: 747,678.03 ktCO2/year</div>
-                <div class="tiles-small"><img src="res/mexico.svg" alt="China Flag">MEXICO: 712,102.10 ktCO2/year</div>
-                <div class="tiles-small"><img src="res/germany.svg" alt="China Flag">GERMANY: 681,810.33 ktCO2/year</div>
-                <div class="tiles-small"><img src="res/sk.svg" alt="China Flag">SOUTH KOREA: 653,846.14 ktCO2/year</div>
-            </div>
-        </div>
-        <div id="reference"> 
-            Stats taken through the <i>List of countries by greenhouse gas emissions</i> on <a href="https://en.wikipedia.org/wiki/List_of_countries_by_greenhouse_gas_emissions">Wikipedia</a>
-        </div>
-    </div>
-</body>
+			<form action="#" id="form">
+				<label class="label-inputs">Electricity Usage (kWh)</label>
+				<input min="0" step="any" type="number" class="inputs" id="elec" />
+				<label class="label-inputs">Vehicle Fuel Consumption (Litre)</label>
+				<input min="0" step="any" type="number" class="inputs" id="fuel" />
+				<label class="label-inputs">Wastage (Kg)</label>
+				<input min="0" step="any" type="number" class="inputs" id="waste" />
+				<label class="label-inputs">Car Mileage (Km)</label>
+				<input min="0" step="any" type="number" class="inputs" id="mile" />
+				<button type="submit" id="calculate">SUBMIT</button>
+			</form>
+			<label for="result" id="result"></label>
+
+			<!-- Set Goal Section -->
+			<div id="goalSection">
+				<h3>
+					<span
+						style="
+							color: rgb(249, 223, 223);
+							background-color: rgba(0, 0, 0, 0.481);
+							border-radius: 8px;
+							padding: 5px;
+						"
+						>Set Your Carbon Goal</span
+					>
+				</h3>
+				<input
+					type="number"
+					id="goalInput"
+					class="inputs"
+					placeholder="Enter goal in kg CO2"
+					min="0"
+					step="any" />
+				<button id="setGoal">Set Goal</button>
+				<p id="goalDisplay"></p>
+				<p id="progressDisplay"></p>
+			</div>
+			<!-- What If? Section -->
+			<div id="whatIfSection">
+				<h3>
+					<span
+						style="
+							color: rgb(249, 223, 223);
+							background-color: rgba(0, 0, 0, 0.481);
+							border-radius: 8px;
+							padding: 5px;
+						"
+						>What If? Explore Changes</span
+					>
+				</h3>
+				<label class="label-inputs">Reduce Electricity (%)</label>
+				<input
+					type="range"
+					id="electricitySlider"
+					class="what-if-slider"
+					min="0"
+					max="100"
+					value="0" />
+				<span class="slider-value" id="electricityValue">0%</span><br />
+				<label class="label-inputs">Reduce Fuel (%)</label>
+				<input
+					type="range"
+					id="fuelSlider"
+					class="what-if-slider"
+					min="0"
+					max="100"
+					value="0" />
+				<span class="slider-value" id="fuelValue">0%</span><br />
+				<label class="label-inputs">Reduce Waste (%)</label>
+				<input
+					type="range"
+					id="wasteSlider"
+					class="what-if-slider"
+					min="0"
+					max="100"
+					value="0" />
+				<span class="slider-value" id="wasteValue">0%</span><br />
+				<label class="label-inputs">Reduce Mileage (%)</label>
+				<input
+					type="range"
+					id="mileSlider"
+					class="what-if-slider"
+					min="0"
+					max="100"
+					value="0" />
+				<span class="slider-value" id="mileValue">0%</span><br />
+				<p id="whatIfResult"></p>
+			</div>
+		</div>
+		<div id="trivia-container">
+			<div id="ccfg">
+				<span style="font-size: 100px; font-weight: 700"
+					>Carbon Cuts, <br />
+					&nbsp;&nbsp;&nbsp;Future <i>Gains</i></span
+				>
+			</div>
+			<div id="list">
+				Major Greenhouse Gas Emitters <br />
+				(2023)
+			</div>
+			<div id="stats-container">
+				<div class="tiles-china">
+					<img src="res/china.svg" alt="China Flag" />CHINA: 15,943,986.55
+					ktCO2/year
+				</div>
+				<div id="sub-stat">
+					<div class="tiles">
+						<img src="res/us.svg" alt="China Flag" />UNITED STATES: 5,960,804.38
+						ktCO2/year
+					</div>
+					<div class="tiles">
+						<img src="res/india.svg" alt="China Flag" />INDIA: 4,133,554.36
+						ktCO2/year
+					</div>
+					<div class="tiles">
+						<img src="res/russia.svg" alt="China Flag" />RUSSIA: 2,672,039.44
+						ktCO2/year
+					</div>
+					<div class="tiles">
+						<img src="res/brazil.svg" alt="China Flag" />BRAZIL: 1,300,168.87
+						ktCO2/year
+					</div>
+					<div class="tiles">
+						<img src="res/indonesia.svg" alt="China Flag" />INDONESIA:
+						1,200,199.79 ktCO2/year
+					</div>
+					<div class="tiles">
+						<img src="res/japan.svg" alt="China Flag" />JAPAN: 1,041,012.82
+						ktCO2/year
+					</div>
+				</div>
+				<div id="sub-substat">
+					<div class="tiles-small">
+						<img src="res/iran.svg" alt="China Flag" />IRAN: 996,752.68
+						ktCO2/year
+					</div>
+					<div class="tiles-small">
+						<img src="res/sa.svg" alt="China Flag" />Saudi Arabia: 805,158.11
+						ktCO2/year
+					</div>
+					<div class="tiles-small">
+						<img src="res/canada.svg" alt="China Flag" />CANADA: 747,678.03
+						ktCO2/year
+					</div>
+					<div class="tiles-small">
+						<img src="res/mexico.svg" alt="China Flag" />MEXICO: 712,102.10
+						ktCO2/year
+					</div>
+					<div class="tiles-small">
+						<img src="res/germany.svg" alt="China Flag" />GERMANY: 681,810.33
+						ktCO2/year
+					</div>
+					<div class="tiles-small">
+						<img src="res/sk.svg" alt="China Flag" />SOUTH KOREA: 653,846.14
+						ktCO2/year
+					</div>
+				</div>
+			</div>
+			<div id="reference">
+				Stats taken through the
+				<i>List of countries by greenhouse gas emissions</i> by
+				<a href="https://edgar.jrc.ec.europa.eu/report_2024#emissions_table"
+					>EDGAR - The Emissions Database for Global Atmospheric Research</a
+				>
+			</div>
+		</div>
+	</body>
 </html>
